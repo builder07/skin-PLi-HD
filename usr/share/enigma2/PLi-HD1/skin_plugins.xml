@@ -1868,18 +1868,13 @@
         <!-- FileBrowser -->
 	<screen name="FilebrowserScreen" position="fill" title="File Browser">
 		<panel name="BasicTemplate"/>
-                <panel name="KeyChannelTemplate"/>
-                <panel name="KeyMenuInfoTemplate"/>
+                <panel name="KeyMenuTemplate"/>
 		<widget name="list_left" position="20,70" size="615,600" scrollbarMode="showOnDemand"/>
 		<widget name="list_right" position="645,70" size="615,600" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="FilebrowserConfigScreen" position="fill" title="">
 		<panel name="PigTemplate"/>
 		<widget name="config" position="520,70" size="740,500" scrollbarMode="showOnDemand"/>
-	</screen>
-	<screen name="FilebrowserScreenInfo" position="fill" title="Info" flags="wfNoBorder" backgroundColor="selectorcolor">
-		<widget name="path" position="20,23" size="1240,28" font="Regular;24" backgroundColor="selectorcolor"/>
-		<widget name="size" position="20,59" size="1240,28" font="Regular;24" backgroundColor="selectorcolor"/>
 	</screen>
 
 	<!-- YouTube by Taapat	-->
@@ -1917,25 +1912,4 @@
 		<widget name="HelpWindow" position="30,420" size="1,1" transparent="1" zPosition="3" alphatest="on"/> <!-- Text keypad -->
 	</screen>
 
-	<!-- ZapHistoryBrowser -->
-
-	<screen name="ZapHistoryBrowser" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
-		<widget source="list" render="Listbox" position="520,70" size="740,600" scrollbarMode="showOnDemand">
-			<convert type="TemplatedMultiContent">
-			{
-				"template":[
-						MultiContentEntryText(pos=(5,3), size=(730,23), font=0, flags=RT_HALIGN_LEFT, text=0),
-						MultiContentEntryText(pos=(35,26), size=(700,21), font=1, flags=RT_HALIGN_LEFT, text=1),
-				],
-				"fonts": [gFont("Regular",20), gFont("Regular",18)],
-				"itemHeight": 50
-			}
-			</convert>
-		</widget>
-	</screen>
-	<screen name="ZapHistoryConfigurator" position="fill">
-		<panel name="PigTemplate"/>
-		<widget name="config" position="520,70" size="740,600" scrollbarMode="showOnDemand"/>
-	</screen>
 </skin>
